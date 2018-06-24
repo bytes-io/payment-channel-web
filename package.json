@@ -16,6 +16,12 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "ethereumjs-abi": "^0.6.5",
+    "ethereumjs-util": "^5.2.0",
+    "truffle": "^4.1.12",
+    "web3": "^1.0.0-beta.34"
+  },
   "devDependencies": {
     "eslint": "^5.0.0",
     "eslint-config-airbnb": "^17.0.0",
@@ -23,12 +29,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
     "solc": "^0.4.24",
-    "solhint": "^1.2.1"
-  },
-  "dependencies": {
-    "ethereumjs-abi": "^0.6.5",
-    "ethereumjs-util": "^5.2.0",
-    "truffle": "^4.1.12",
-    "web3": "^1.0.0-beta.34"
+    "solhint": "^1.2.1",
+    "solidity-coverage": "^0.5.4"
   }
 }

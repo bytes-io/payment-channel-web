@@ -1,0 +1,8 @@
+.DS_Store
+*.swp
+*.swo
+
+secrets.json
+
+build
+node_modules

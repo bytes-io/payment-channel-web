@@ -1,0 +1,34 @@
+{
+  "name": "payment-channel-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "truffle compile",
+    "fix:js": "eslint --fix lib/*.js",
+    "lint:js": "eslint lib/*.js",
+    "lint:sol": "solhint contracts/*.sol contracts/*/*.sol test/*.sol test/*/*.sol",
+    "lint": "npm run lint:js && npm run lint:sol",
+    "publish": "truffle publish",
+    "posttest": "npm run lint",
+    "test": "truffle test",
+    "coverage": "solidity-coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.0.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "solc": "^0.4.24",
+    "solhint": "^1.2.1"
+  },
+  "dependencies": {
+    "ethereumjs-abi": "^0.6.5",
+    "ethereumjs-util": "^5.2.0",
+    "truffle": "^4.1.12",
+    "web3": "^1.0.0-beta.34"
+  }
+}

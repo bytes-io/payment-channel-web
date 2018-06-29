@@ -9,6 +9,10 @@
     "ecmaVersion": 8,
     "sourceType": "module"
   },
+  "rules": {
+    "no-use-before-define": 0,
+    "comma-dangle": 0
+  },
   "globals": {
     "assert": true,
     "it": true,

@@ -1,16 +1,16 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-  entry: './lib/client/main.js',
+  entry: './app/main.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].[hash].js'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './lib/client/index.html',
+      template: './app/index.html',
       filename: 'index.html',
       inject: 'body',
       hash: false,
@@ -23,14 +23,14 @@ module.exports = {
     })
   ],
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.json$/,
         use: 'json-loader'
       },
       {
         test: /\.js$/,
-        exclude: /(node_modules)/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015'],
@@ -39,4 +39,4 @@ module.exports = {
       }
     ]
   }
-};
+}

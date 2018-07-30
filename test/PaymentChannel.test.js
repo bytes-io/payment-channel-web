@@ -5,10 +5,14 @@ async function openValidChannel(channel, sender, recipient) {
   // setup
 }
 
+const now = new Date();
+const twoHoursLater = new Date(now.getTime() + (2 * 1000 * 60 * 60)).getTime() / 1000;
+
 contract('PaymentChannel', (accounts) => {
   describe('openChannel', () => {
     it('opens a channel between accounts[0] and accounts[1]', async () => {
       const channel = await PaymentChannel.new();
+      openValidChannel(channel, accounts[0], twoHoursLater);
     });
   });
 });

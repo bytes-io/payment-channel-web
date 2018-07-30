@@ -6,16 +6,16 @@
   "scripts": {
     "start": "node lib/index.js",
     "test": "truffle test",
-    "dev": "truffle serve",
     "compile": "truffle compile",
     "migrate": "truffle migrate",
     "publish": "truffle publish",
-    "fix:js": "eslint --fix lib/*.js migrations/*.js",
-    "lint:js": "eslint lib/*.js migrations/*.js",
+    "fix:js": "eslint --fix lib/**/**.js migrations/*.js",
+    "lint:js": "eslint lib/**/**.js migrations/*.js",
     "lint:sol": "solhint contracts/*.sol contracts/*/*.sol test/*.sol test/*/*.sol",
     "lint": "npm run lint:js && npm run lint:sol",
     "posttest": "npm run lint",
-    "coverage": "solidity-coverage"
+    "coverage": "solidity-coverage",
+    "server": "node lib/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -28,13 +28,20 @@
     "web3": "^1.0.0-beta.34"
   },
   "devDependencies": {
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
     "eslint": "^5.0.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
+    "json-loader": "^0.5.7",
     "solc": "^0.4.24",
     "solhint": "^1.2.1",
-    "solidity-coverage": "^0.5.4"
+    "solidity-coverage": "^0.5.4",
+    "truffle-contract": "^3.0.6",
+    "webpack": "^4.16.3",
+    "webpack-dev-server": "^3.1.5"
   }
 }

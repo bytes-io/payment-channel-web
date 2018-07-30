@@ -8,6 +8,7 @@ Simple example of an payment channel on Ethereum chain to show off-chain transac
 npm install
 npm run compile
 npm run migrate
+npm run server
 ```
 
 ### Tests

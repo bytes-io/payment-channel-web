@@ -15,11 +15,13 @@
     "lint:sol": "solhint contracts/*.sol contracts/*/*.sol test/*.sol test/*/*.sol",
     "lint": "npm run lint:js && npm run lint:sol",
     "posttest": "npm run lint",
-    "coverage": "solidity-coverage"
+    "coverage": "solidity-coverage",
+    "server": "node lib/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.6.1",
     "ethereumjs-abi": "^0.6.5",
     "ethereumjs-util": "^5.2.0",
     "express": "^4.16.3",

@@ -21,6 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "ethereumjs-abi": "^0.6.5",
     "ethereumjs-util": "^5.2.0",
